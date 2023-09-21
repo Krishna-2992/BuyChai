@@ -4,7 +4,7 @@ this is the transfer ether dapp...
 
 create the state containing provider, signer and contract and set all values as null
 
-```
+```js
 const [state, setState] = useState({
         provider: null,
         signer: null,
@@ -14,7 +14,8 @@ const [state, setState] = useState({
 
 then write a connect wallet function:
 
-```{
+```js 
+{
         const connectWallet = async () => {
                 const { ethereum } = window
                 if (ethereum) {
@@ -46,7 +47,7 @@ then write a connect wallet function:
 ```
 
 then just call the function so as to send the ethers to the deposit function: 
-```
+``` js
 const buyChai = async (event) => {
         event.preventDefault()
         const { contract } = state
